@@ -11,11 +11,11 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'hirdes@clickstorm.de',
     'author_company' => 'clickstorm GmbH',
     'state' => 'stable',
-    'version' => '10.1.1-dev',
+    'version' => '10.2.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '14.1.0-14.4.99',
-            'seo' => '14.1.0-14.4.99',
+            'typo3' => '14.3.0-14.3.99',
+            'seo' => '14.3.0-14.3.99',
         ],
     ],
     'autoload' => [
