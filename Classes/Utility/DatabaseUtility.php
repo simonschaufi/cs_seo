@@ -192,9 +192,9 @@ class DatabaseUtility
                 ),
                 $folderExpression,
                 // always check the default language of sys_file_metadata
-                $queryBuilder->expr()->in(
+                $queryBuilder->expr()->eq(
                     'meta.sys_language_uid',
-                    $queryBuilder->createNamedParameter($queryBuilder->createNamedParameter(0, Connection::PARAM_INT))
+                    $queryBuilder->createNamedParameter(0, Connection::PARAM_INT)
                 )
             );
 
