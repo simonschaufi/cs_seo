@@ -23,12 +23,11 @@ class CanonicalService extends AbstractUrlService
 
         /** @var ContentObjectRenderer $cObj */
         $cObj = GeneralUtility::makeInstance(ContentObjectRenderer::class);
-        $context = $this->context;
         $typoLinkConf = GlobalsUtility::getTypoScriptSetup()['lib.']['currentUrl.']['typolink.'] ?? [];
 
         // check if the current page is a detail page of a record
         if ($metaData) {
-            $currentLanguageUid = $context->getAspect('language')->getId();
+            $currentLanguageUid = $this->context->getAspect('language')->getId();
             $tables = ConfigurationUtility::getTablesToExtend();
             $currentItemConf = $metaDataService::getCurrentTableConfiguration($tables, $cObj);
             $l10nItems = $this->getAllLanguagesFromItem($currentItemConf['table'], (int)$currentItemConf['uid']);
